@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
-import { User } from '../../../../models/user.model';
+import { IUser } from '../../../../models/user.model';
 
 @Component({
   selector: 'app-user-item',
@@ -8,7 +8,7 @@ import { User } from '../../../../models/user.model';
   styleUrls: ['./user-item.component.scss']
 })
 export class UserItemComponent implements OnInit {
-  @Input() user: User;
+  @Input() user: IUser;
   @Output() selectedUser = new EventEmitter();
 
   constructor() { }

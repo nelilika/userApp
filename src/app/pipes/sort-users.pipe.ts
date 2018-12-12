@@ -25,8 +25,6 @@ export class SortUsersPipe implements PipeTransform {
         } else {
           return 0;
         }
-      } else {
-        return users;
       }
     });
     return users;

@@ -10,8 +10,8 @@ import { UserService } from '../../services/user.service';
 })
 export class UsersComponent implements OnInit {
   selectedUser: IUser;
-  selectedRole: string = 'all';
-  selectedSort: string = '';
+  selectedRole = 'all';
+  selectedSort = '';
   roles: Array<string> = [];
   users: Array<IUser> = [];
 
@@ -25,13 +25,9 @@ export class UsersComponent implements OnInit {
   }
 
   getUsersRole() {
-    const allRoles = this.users.map(user => user.role);
+    const allRoles = this.users.map(user: IUser => user.role);
     this.roles = [...new Set(allRoles)];
     this.roles.unshift('all');
-  }
-
-  sortByName() {
-
   }
 
   showUserDetails(user) {
