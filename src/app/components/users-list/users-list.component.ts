@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 import { User } from '../../models/user.model';
 import { UserService } from '../../services/user.service';
@@ -9,6 +9,7 @@ import { UserService } from '../../services/user.service';
   styleUrls: ['./users-list.component.scss']
 })
 export class UsersListComponent implements OnInit {
+  @Output() selectedUser = new EventEmitter();
 
   users: User[] = [];
 
@@ -16,6 +17,10 @@ export class UsersListComponent implements OnInit {
 
   ngOnInit() {
     this.userService.getUsers().subscribe((users: User[]) => this.users = users);
+  }
+
+  onSelectedUser(event) {
+    this.selectedUser.emit(event);
   }
 
 }

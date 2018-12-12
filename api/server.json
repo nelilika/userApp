@@ -23,5 +23,21 @@
     "age": "30",
     "city": "Odessa",
     "avatarUrl": "https://bit.ly/2EeZj1F"
+  }, {
+    "id": "4",
+    "firstName": "Nikita",
+    "lastName": "Dzigurda",
+    "role": "project manager",
+    "age": "27",
+    "city": "Kharkiv",
+    "avatarUrl": "https://bit.ly/2qCScIR"
+  }, {
+    "id": "5",
+    "firstName": "Mark",
+    "lastName": "Chugreev",
+    "role": "developer",
+    "age": "21",
+    "city": "Kiev",
+    "avatarUrl": "https://bit.ly/2ROVeFj"
   }]
 }

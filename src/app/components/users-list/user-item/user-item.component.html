@@ -1,4 +1,4 @@
-<mat-list-item>
+<mat-list-item (click)="onSelected()">
   <img matListAvatar [src]="user.avatarUrl" alt="{{user.lastName}}">
   <h3 matLine> {{ user.firstName }} {{ user.lastName }} ( {{ user.city }} )</h3>
   <p matLine>

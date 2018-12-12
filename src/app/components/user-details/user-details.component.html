@@ -1,0 +1,16 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{ selectedUser.firstName }} {{ selectedUser.lastName }}</mat-card-title>
+    <mat-card-subtitle>{{ selectedUser.role }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image
+       class="avataImg"
+       [src]="selectedUser.avatarUrl"
+       [alt]="selectedUser.lastName">
+  <mat-card-content>
+    <h4>Delailed information</h4>
+    <p>Age: {{ selectedUser.age }}</p>
+    <p>City: {{ selectedUser.city }}</p>
+  </mat-card-content>
+</mat-card>

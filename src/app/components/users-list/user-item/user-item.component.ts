@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 import { User } from '../../../models/user.model';
 
@@ -9,11 +9,16 @@ import { User } from '../../../models/user.model';
 })
 export class UserItemComponent implements OnInit {
   @Input() user: User;
+  @Output() selectedUser = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
 
+  }
+
+  onSelected() {
+    this.selectedUser.emit(this.user);
   }
 
 }

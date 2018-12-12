@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersListComponent } from './components/users-list/users-list.component';
 import { UserItemComponent } from './components/users-list/user-item/user-item.component';
-import { UserDetailsComponent } from './components/users-list/user-details/user-details.component';
+import { UserDetailsComponent } from './components/user-details/user-details.component';
 
 import { UserService } from './services/user.service';
 
