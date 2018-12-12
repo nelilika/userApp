@@ -1,6 +1,6 @@
 import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 
-import { User } from '../../../models/user.model';
+import { IUser } from '../../../models/user.model';
 
 @Component({
   selector: 'app-users-list',
@@ -8,8 +8,9 @@ import { User } from '../../../models/user.model';
   styleUrls: ['./users-list.component.scss']
 })
 export class UsersListComponent implements OnInit {
-  @Input() users: User[];
+  @Input() users: Array<IUser>;
   @Input() selectedRole: string;
+  @Input() selectedSort: string;
   @Output() selectedUser = new EventEmitter();
 
   constructor() { }

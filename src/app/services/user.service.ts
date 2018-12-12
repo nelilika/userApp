@@ -3,11 +3,11 @@ import { HttpClient } from "@angular/common/http";
 import { Observable, of } from 'rxjs';
 import { map, catchError, tap } from 'rxjs/operators';
 
-import { User } from '../models/user.model';
+import { IUser } from '../models/user.model';
 
 @Injectable()
 export class UserService {
-  users: User[] = [];
+  users: Array<IUser> = [];
   API_URL = 'http://localhost:3000';
 
   constructor(private http: HttpClient) { }
@@ -17,7 +17,7 @@ export class UserService {
       .pipe(map(this.extractData));
   }
 
-  private extractData(res: User[]) {
+  private extractData(res: Array<IUser>) {
     this.users = res;
     return this.users || { };
   }

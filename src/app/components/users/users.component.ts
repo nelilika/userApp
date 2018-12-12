@@ -1,6 +1,6 @@
-import { Component, OnInit, OnChanges, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import { User } from '../../models/user.model';
+import { IUser } from '../../models/user.model';
 import { UserService } from '../../services/user.service';
 
 @Component({
@@ -8,28 +8,30 @@ import { UserService } from '../../services/user.service';
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.scss']
 })
-export class UsersComponent implements OnInit, OnChanges {
-  selectedUser: User;
+export class UsersComponent implements OnInit {
+  selectedUser: IUser;
   selectedRole: string = 'all';
+  selectedSort: string = '';
   roles: Array<string> = [];
-  users: User[] = [];
+  users: Array<IUser> = [];
 
   constructor(private userService: UserService) { }
 
   ngOnInit() {
-    this.userService.getUsers().subscribe((users: User[]) => {
+    this.userService.getUsers().subscribe((users: Array<IUser>) => {
       this.users = users;
       this.getUsersRole();
     });
-  }
-
-  ngOnChanges() {
   }
 
   getUsersRole() {
     const allRoles = this.users.map(user => user.role);
     this.roles = [...new Set(allRoles)];
     this.roles.unshift('all');
+  }
+
+  sortByName() {
+
   }
 
   showUserDetails(user) {

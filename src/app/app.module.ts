@@ -1,7 +1,8 @@
-import { MatCardModule, MatButtonModule, MatListModule, MatSelectModule } from '@angular/material';
+import { MatCardModule, MatButtonModule, MatListModule, MatSelectModule, MatRadioModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +14,7 @@ import { UsersComponent } from './components/users/users.component';
 
 import { UserService } from './services/user.service';
 import { FilterUsersPipe } from './pipes/filter-users.pipe';
+import { SortUsersPipe } from './pipes/sort-users.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { FilterUsersPipe } from './pipes/filter-users.pipe';
     UserItemComponent,
     UsersComponent,
     FilterUsersPipe,
+    SortUsersPipe,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +35,8 @@ import { FilterUsersPipe } from './pipes/filter-users.pipe';
     MatButtonModule,
     MatListModule,
     MatSelectModule,
+    MatRadioModule,
+    FormsModule,
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
