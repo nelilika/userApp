@@ -1,0 +1,27 @@
+{
+  "users": [{
+    "id": "1",
+    "firstName": "Liliia",
+    "lastName": "Kolobova",
+    "role": "admin",
+    "age": "23",
+    "city": "Kharkiv",
+    "avatarUrl": "https://bit.ly/2jOOA5M"
+  }, {
+    "id": "2",
+    "firstName": "Ihor",
+    "lastName": "Belov",
+    "role": "developer",
+    "age": "25",
+    "city": "Kiev",
+    "avatarUrl": "https://bit.ly/2pXBWBU"
+  }, {
+    "id": "3",
+    "firstName": "Anton",
+    "lastName": "Sitnik",
+    "role": "qa",
+    "age": "30",
+    "city": "Odessa",
+    "avatarUrl": "https://bit.ly/2EeZj1F"
+  }]
+}
