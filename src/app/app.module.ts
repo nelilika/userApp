@@ -1,16 +1,17 @@
+import { MatCardModule, MatButtonModule, MatListModule, MatSelectModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatCardModule, MatButtonModule, MatListModule } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UsersListComponent } from './components/users-list/users-list.component';
-import { UserItemComponent } from './components/users-list/user-item/user-item.component';
-import { UserDetailsComponent } from './components/user-details/user-details.component';
+import { UsersListComponent } from './components/users/users-list/users-list.component';
+import { UserItemComponent } from './components/users/users-list/user-item/user-item.component';
+import { UserDetailsComponent } from './components/users/user-details/user-details.component';
 
 import { UserService } from './services/user.service';
+import { UsersComponent } from './components/users/users.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { UserService } from './services/user.service';
     UsersListComponent,
     UserDetailsComponent,
     UserItemComponent,
+    UsersComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,6 +29,7 @@ import { UserService } from './services/user.service';
     MatCardModule,
     MatButtonModule,
     MatListModule,
+    MatSelectModule,
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

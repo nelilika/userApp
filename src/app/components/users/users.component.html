@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <mat-form-field>
+        <mat-select placeholder="User roles" [(value)]="selectedRole">
+          <mat-option *ngFor="let role of roles" [value]="role">
+            {{role}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col">
+      <app-users-list (selectedUser)='showUserDetails($event)'
+                      [users]="users"
+      ></app-users-list>
+    </div>
+    <div class="col">
+      <app-user-details
+        *ngIf="selectedUser"
+        [selectedUser] = "selectedUser"></app-user-details>
+    </div>
+  </div>
+</div>
