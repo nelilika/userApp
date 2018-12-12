@@ -12,6 +12,7 @@
     <div class="col">
       <app-users-list (selectedUser)='showUserDetails($event)'
                       [users]="users"
+                      [selectedRole]="selectedRole"
       ></app-users-list>
     </div>
     <div class="col">

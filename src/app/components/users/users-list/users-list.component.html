@@ -1,5 +1,5 @@
 <mat-list>
-  <app-user-item *ngFor="let user of users"
+  <app-user-item *ngFor="let user of users | filterUsers : selectedRole"
                  [user]="user"
                  (selectedUser)='onSelectedUser($event)'
   ></app-user-item>

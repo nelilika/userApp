@@ -10,7 +10,7 @@ import { UserService } from '../../services/user.service';
 })
 export class UsersComponent implements OnInit, OnChanges {
   selectedUser: User;
-  selectedRole: string;
+  selectedRole: string = 'all';
   roles: Array<string> = [];
   users: User[] = [];
 
@@ -27,7 +27,9 @@ export class UsersComponent implements OnInit, OnChanges {
   }
 
   getUsersRole() {
-    this.roles = this.users.map(user => user.role);
+    const allRoles = this.users.map(user => user.role);
+    this.roles = [...new Set(allRoles)];
+    this.roles.unshift('all');
   }
 
   showUserDetails(user) {

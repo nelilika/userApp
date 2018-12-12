@@ -9,9 +9,10 @@ import { AppComponent } from './app.component';
 import { UsersListComponent } from './components/users/users-list/users-list.component';
 import { UserItemComponent } from './components/users/users-list/user-item/user-item.component';
 import { UserDetailsComponent } from './components/users/user-details/user-details.component';
+import { UsersComponent } from './components/users/users.component';
 
 import { UserService } from './services/user.service';
-import { UsersComponent } from './components/users/users.component';
+import { FilterUsersPipe } from './pipes/filter-users.pipe';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { UsersComponent } from './components/users/users.component';
     UserDetailsComponent,
     UserItemComponent,
     UsersComponent,
+    FilterUsersPipe,
   ],
   imports: [
     BrowserModule,
