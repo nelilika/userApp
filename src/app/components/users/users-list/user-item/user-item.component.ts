@@ -9,7 +9,7 @@ import { IUser } from '../../../../models/user.model';
 })
 export class UserItemComponent implements OnInit {
   @Input() user: IUser;
-  @Output() selectedUser = new EventEmitter();
+  @Output() selectedUser = new EventEmitter<IUser>();
 
   constructor() { }
 

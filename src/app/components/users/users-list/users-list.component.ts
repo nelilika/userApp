@@ -11,12 +11,12 @@ export class UsersListComponent implements OnInit {
   @Input() users: Array<IUser>;
   @Input() selectedRole: string;
   @Input() selectedSort: string;
-  @Output() selectedUser = new EventEmitter();
+  @Output() selectedUser = new EventEmitter<IUser>();
 
   constructor() { }
 
-  onSelectedUser(event) {
-    this.selectedUser.emit(event);
+  onSelectedUser(user: IUser) {
+    this.selectedUser.emit(user);
   }
 
   ngOnInit() {

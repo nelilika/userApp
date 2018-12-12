@@ -30,7 +30,7 @@ export class UsersComponent implements OnInit {
     this.roles.unshift('all');
   }
 
-  showUserDetails(user) {
+  showUserDetails(user: IUser) {
     this.selectedUser = user;
   }
 
