@@ -25,7 +25,7 @@ export class UsersComponent implements OnInit {
   }
 
   getUsersRole() {
-    const allRoles = this.users.map(user: IUser => user.role);
+    const allRoles = this.users.map((user: IUser) => user.role);
     this.roles = [...new Set(allRoles)];
     this.roles.unshift('all');
   }
