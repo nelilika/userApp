@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
     label: 'Users',
     link: './users',
   }];
+  activeLink = this.links[0].label;
 
   constructor() { }
 
