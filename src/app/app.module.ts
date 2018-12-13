@@ -9,6 +9,9 @@ import { UsersModule } from './components/users/users.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 
+import { AuthService } from "./services/auth.service";
+import { AuthGuard } from './auth-guard.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +24,7 @@ import { HeaderComponent } from './components/header/header.component';
     HomeModule,
     MatTabsModule,
   ],
-  providers: [],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
