@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 
 import { IUser } from '../models/user.model';
 
@@ -13,16 +12,10 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   getUsers(): Observable<any> {
-    return this.http.get(`${this.API_URL}/users`)
-      .pipe(map(this.extractData));
+    return this.http.get(`${this.API_URL}/users`);
   }
 
   getUser(id): Observable<any> {
     return this.http.get(`${this.API_URL}/users/${id}`);
-  }
-
-  private extractData(res: Array<IUser>) {
-    this.users = res;
-    return this.users || { };
   }
 }

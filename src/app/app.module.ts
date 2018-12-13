@@ -11,11 +11,13 @@ import { HeaderComponent } from './components/header/header.component';
 
 import { AuthService } from "./services/auth.service";
 import { AuthGuard } from './auth-guard.service';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
