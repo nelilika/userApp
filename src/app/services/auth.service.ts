@@ -17,7 +17,8 @@ export class AuthService {
       .pipe(map(this.setSession));
   }
 
-  private setSession(token: string) {
+  private setSession(token: string): string {
     localStorage.setItem('token', token);
+    return token;
   }
 }

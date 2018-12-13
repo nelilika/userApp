@@ -10,11 +10,11 @@ import { UserDetailsComponent } from './components/users/user-details/user-detai
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: '', canActivate: [AuthGuard], component: HomeComponent },
-  { path: 'users', canActivate: [AuthGuard], component: UsersComponent, children: [
-    { path: ':id', component: UserDetailsComponent },
+  { path: '', canActivate: [AuthGuard], component: HomeComponent, children: [
+    { path: 'users', canActivate: [AuthGuard], component: UsersComponent, children: [
+      { path: ':id', component: UserDetailsComponent },
+    ]},
   ]},
-
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
