@@ -15,8 +15,7 @@
         <mat-radio-button value="za">Z -> A</mat-radio-button>
       </mat-radio-group>
 
-      <app-users-list (selectedUser)='showUserDetails($event)'
-                      [users]="users"
+      <app-users-list [users]="users"
                       [selectedRole]="selectedRole"
                       [selectedSort]="selectedSort"
       ></app-users-list>

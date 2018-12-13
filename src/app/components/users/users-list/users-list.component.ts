@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { IUser } from '../../../models/user.model';
 
@@ -11,13 +11,8 @@ export class UsersListComponent implements OnInit {
   @Input() users: Array<IUser>;
   @Input() selectedRole: string;
   @Input() selectedSort: string;
-  @Output() selectedUser = new EventEmitter<IUser>();
 
   constructor() { }
-
-  onSelectedUser(user: IUser) {
-    this.selectedUser.emit(user);
-  }
 
   ngOnInit() {
 

@@ -9,7 +9,6 @@ import { UserService } from '../../services/user.service';
   styleUrls: ['./users.component.scss']
 })
 export class UsersComponent implements OnInit {
-  selectedUser: IUser;
   selectedRole = 'all';
   selectedSort = '';
   roles: Array<string> = [];
@@ -29,9 +28,4 @@ export class UsersComponent implements OnInit {
     this.roles = [...new Set(allRoles)];
     this.roles.unshift('all');
   }
-
-  showUserDetails(user: IUser) {
-    this.selectedUser = user;
-  }
-
 }
