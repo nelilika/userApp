@@ -17,6 +17,10 @@ export class UserService {
       .pipe(map(this.extractData));
   }
 
+  getUser(id): Observable<any> {
+    return this.http.get(`${this.API_URL}/users/${id}`);
+  }
+
   private extractData(res: Array<IUser>) {
     this.users = res;
     return this.users || { };

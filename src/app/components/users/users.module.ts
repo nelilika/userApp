@@ -11,6 +11,8 @@ import {
   MatRadioModule,
 } from '@angular/material';
 
+import { AppRoutingModule } from '../../app-routing.module';
+
 import { UsersComponent } from './users.component';
 import { UsersListComponent } from './users-list/users-list.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
@@ -40,6 +42,7 @@ import { FilterUsersPipe } from '../../pipes/filter-users.pipe';
     MatSelectModule,
     MatRadioModule,
     FormsModule,
+    AppRoutingModule,
   ],
   providers: [UserService],
 })

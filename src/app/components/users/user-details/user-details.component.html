@@ -1,16 +1,19 @@
-<mat-card class="example-card">
+<mat-card class="example-card" *ngIf="user">
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>{{ selectedUser.firstName }} {{ selectedUser.lastName }}</mat-card-title>
-    <mat-card-subtitle>{{ selectedUser.role }}</mat-card-subtitle>
+    <mat-card-title>{{ user.firstName }} {{ user.lastName }}</mat-card-title>
+    <mat-card-subtitle>{{ user.role }}</mat-card-subtitle>
   </mat-card-header>
   <img mat-card-image
        class="avataImg"
-       [src]="selectedUser.avatarUrl"
-       [alt]="selectedUser.lastName">
+       [src]="user.avatarUrl"
+       [alt]="user.lastName">
   <mat-card-content>
     <h4>Delailed information</h4>
-    <p>Age: {{ selectedUser.age }}</p>
-    <p>City: {{ selectedUser.city }}</p>
+    <p>Age: {{ user.age }}</p>
+    <p>City: {{ user.city }}</p>
   </mat-card-content>
+  <mat-card-actions>
+    <button mat-button [routerLink]="['/users']">BACK</button>
+  </mat-card-actions>
 </mat-card>
