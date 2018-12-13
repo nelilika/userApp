@@ -1,44 +1,23 @@
-import { MatCardModule, MatButtonModule, MatListModule, MatSelectModule, MatRadioModule } from '@angular/material';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { UsersListComponent } from './components/users/users-list/users-list.component';
-import { UserItemComponent } from './components/users/users-list/user-item/user-item.component';
-import { UserDetailsComponent } from './components/users/user-details/user-details.component';
-import { UsersComponent } from './components/users/users.component';
+import { HomeModule } from "./components/home/home.module";
+import { UsersModule } from './components/users/users.module';
 
-import { UserService } from './services/user.service';
-import { FilterUsersPipe } from './pipes/filter-users.pipe';
-import { SortUsersPipe } from './pipes/sort-users.pipe';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UsersListComponent,
-    UserDetailsComponent,
-    UserItemComponent,
-    UsersComponent,
-    FilterUsersPipe,
-    SortUsersPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    MatCardModule,
-    MatButtonModule,
-    MatListModule,
-    MatSelectModule,
-    MatRadioModule,
-    FormsModule,
+    UsersModule,
+    HomeModule,
   ],
-  providers: [UserService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
