@@ -5,6 +5,8 @@ import { map } from 'rxjs/operators';
 
 import { environment } from "../../environments/environment";
 
+import { ILogin } from '../models/login.model';
+
 @Injectable()
 export class AuthService {
 
@@ -14,7 +16,7 @@ export class AuthService {
     return localStorage.getItem('token');
   }
 
-  login(email: string, password: string): Observable<any> {
+  login(loginParams: ILogin): Observable<any> {
     return this.http.get<any>(`${environment.api_url}/login`)
       .pipe(map(this.setSession));
   }
