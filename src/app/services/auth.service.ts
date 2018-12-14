@@ -3,9 +3,11 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
+import { environment } from "../../environments/environment";
+
 @Injectable()
 export class AuthService {
-  API_URL = 'http://localhost:3000';
+
   constructor(private http: HttpClient) {}
 
   isAuthenticated() {
@@ -13,12 +15,12 @@ export class AuthService {
   }
 
   login(email: string, password: string): Observable<any> {
-    return this.http.get(`${this.API_URL}/login`)
+    return this.http.get<any>(`${environment.api_url}/login`)
       .pipe(map(this.setSession));
   }
 
-  private setSession(token: string): string {
-    localStorage.setItem('token', token);
-    return token;
+  private setSession(res: any): string {
+    localStorage.setItem('token', res.token);
+    return res.token;
   }
 }

@@ -4,18 +4,19 @@ import { Observable } from 'rxjs';
 
 import { IUser } from '../models/user.model';
 
+import { environment } from "../../environments/environment";
+
 @Injectable()
 export class UserService {
   users: Array<IUser> = [];
-  API_URL = 'http://localhost:3000';
 
   constructor(private http: HttpClient) { }
 
   getUsers(): Observable<any> {
-    return this.http.get(`${this.API_URL}/users`);
+    return this.http.get<any>(`${environment.api_url}/users`);
   }
 
   getUser(id): Observable<any> {
-    return this.http.get(`${this.API_URL}/users/${id}`);
+    return this.http.get<any>(`${environment.api_url}/users/${id}`);
   }
 }
