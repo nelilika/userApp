@@ -9,6 +9,8 @@ import {
   MatListModule,
   MatSelectModule,
   MatRadioModule,
+  MatExpansionModule,
+  MatIconModule,
 } from '@angular/material';
 
 import { AppRoutingModule } from '../../app-routing.module';
@@ -43,6 +45,8 @@ import { FilterUsersPipe } from '../../pipes/filter-users.pipe';
     MatRadioModule,
     FormsModule,
     AppRoutingModule,
+    MatExpansionModule,
+    MatIconModule,
   ],
   providers: [UserService],
 })

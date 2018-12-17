@@ -12,5 +12,22 @@
     <h4>Delailed information</h4>
     <p>Age: {{ user.age }}</p>
     <p>City: {{ user.city }}</p>
+    <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = !panelOpenState"
+                           (closed)="panelOpenState = !panelOpenState">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Skills
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list role="list">
+          <mat-list-item role="listitem"
+                         *ngFor="let skill of user.skills">
+            <mat-icon mat-list-icon>fiber_manual_record</mat-icon>
+            <h5>{{ skill }}</h5>
+          </mat-list-item>
+        </mat-list>
+      </mat-expansion-panel>
+    </mat-accordion>
   </mat-card-content>
 </mat-card>

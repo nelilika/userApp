@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 
 import {
   MatTabsModule,
+  MatToolbarModule,
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -22,6 +23,7 @@ import { HomeComponent } from './home.component';
     ReactiveFormsModule,
     BrowserModule,
     MatTabsModule,
+    MatToolbarModule,
   ],
   providers: [],
 })

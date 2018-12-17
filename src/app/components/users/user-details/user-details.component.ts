@@ -15,6 +15,7 @@ export class UserDetailsComponent implements OnInit, OnDestroy {
   user: IUser;
   paramsSubscription: Subscription;
   userSubscription: Subscription;
+  panelOpenState = false;
 
   constructor(private userService: UserService,
               private route: ActivatedRoute) { }

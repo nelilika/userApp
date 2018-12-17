@@ -1,7 +1,9 @@
-<nav mat-tab-nav-bar>
-  <a mat-tab-link
-     *ngFor="let link of links"
-     [routerLink]="link.link"
-     (click)="activeLink = link.label"
-     [active]="activeLink === link.label"> {{link.label}} </a>
-</nav>
+<mat-toolbar>
+  <nav mat-tab-nav-bar>
+    <a mat-tab-link
+       *ngFor="let link of links"
+       [routerLink]="link.link"
+       (click)="activeLink = link.label"
+       [active]="activeLink === link.label"> {{link.label}} </a>
+  </nav>
+</mat-toolbar>

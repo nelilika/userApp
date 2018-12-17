@@ -6,4 +6,6 @@ export interface IUser {
   age: number;
   city: string;
   avatarUrl: string;
+  skills: Array<string>;
+  about: string;
 }

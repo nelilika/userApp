@@ -6,7 +6,14 @@
     "role": "admin",
     "age": "23",
     "city": "Kharkiv",
-    "avatarUrl": "https://bit.ly/2jOOA5M"
+    "avatarUrl": "https://bit.ly/2jOOA5M",
+    "skills": [
+      "JavaScript",
+      "Python",
+      "OOP",
+      "Node.Js"
+    ],
+    "about": "No comfort do written conduct at prevent manners on. Celebrated contrasted discretion him sympathize her collecting occasional. Do answered bachelor occasion in of offended no concerns."
   }, {
     "id": "2",
     "firstName": "Ihor",
@@ -14,7 +21,12 @@
     "role": "developer",
     "age": "25",
     "city": "Kiev",
-    "avatarUrl": "https://bit.ly/2pXBWBU"
+    "avatarUrl": "https://bit.ly/2pXBWBU",
+    "skills": [
+      "Java",
+      "Eclipse"
+    ],
+    "about": "Supply worthy warmth branch of no ye. Voice tried known to as my to. Though wished merits or be. Alone visit use these smart rooms ham. No waiting in on enjoyed placing it inquiry."
   }, {
     "id": "3",
     "firstName": "Anton",
@@ -22,7 +34,13 @@
     "role": "qa",
     "age": "30",
     "city": "Odessa",
-    "avatarUrl": "https://bit.ly/2EeZj1F"
+    "avatarUrl": "https://bit.ly/2EeZj1F",
+    "skills": [
+      "C++",
+      "C",
+      "QA"
+    ],
+    "about": "Provided so as doubtful on striking required. Waiting we to compass assured. "
   }, {
     "id": "4",
     "firstName": "Nikita",
@@ -30,7 +48,13 @@
     "role": "project manager",
     "age": "27",
     "city": "Kharkiv",
-    "avatarUrl": "https://bit.ly/2qCScIR"
+    "avatarUrl": "https://bit.ly/2qCScIR",
+    "skills": [
+      "C++",
+      "JavaScript",
+      "QA"
+    ],
+    "about": "Opinions learning likewise daughter now age outweigh. Fanny at wrong table ye in."
   }, {
     "id": "5",
     "firstName": "Mark",
@@ -38,7 +62,13 @@
     "role": "developer",
     "age": "21",
     "city": "Kharkiv",
-    "avatarUrl": "https://bit.ly/2ROVeFj"
+    "avatarUrl": "https://bit.ly/2ROVeFj",
+    "skills": [
+      "C++",
+      "C",
+      "GO"
+    ],
+    "about": "Discourse otherwise disposing as it of strangers forfeited deficient. "
   }],
   "login": {
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzNTM0NTQzNTQzNTQzNTM0NTMiLCJleHAiOjE1MDQ2OTkyNTZ9.zG-2FvGegujxoLWwIQfNB5IT46D-xC4e8dEDYwi6aRM"
