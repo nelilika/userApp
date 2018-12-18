@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   onLogin() {
     this.authSubscription = this.authService.login(this.loginForm.value)
       .subscribe(() => {
-        this.router.navigate(['/']);
+        this.router.navigate(['/dashboard']);
     });
   }
 

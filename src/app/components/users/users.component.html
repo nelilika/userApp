@@ -1,27 +1,27 @@
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <mat-form-field>
-        <mat-select placeholder="User roles" [(value)]="selectedRole">
-          <mat-option *ngFor="let role of roles" [value]="role">
-            {{role}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-    </div>
-    <div class="col">
-      <mat-radio-group [(ngModel)]="selectedSort">
-        <mat-radio-button value="az">A -> Z</mat-radio-button>
-        <mat-radio-button value="za">Z -> A</mat-radio-button>
-      </mat-radio-group>
+<div class="row">
+  <div class="col">
+    <mat-form-field>
+      <mat-select placeholder="User roles" [(value)]="selectedRole">
+        <mat-option *ngFor="let role of roles" [value]="role">
+          {{role}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
 
-      <app-users-list [users]="users"
-                      [selectedRole]="selectedRole"
-                      [selectedSort]="selectedSort"
-      ></app-users-list>
-    </div>
-    <div class="col">
-      <router-outlet></router-outlet>
-    </div>
+  <div class="col">
+    <mat-radio-group [(ngModel)]="selectedSort">
+      <mat-radio-button value="az">A -> Z</mat-radio-button>
+      <mat-radio-button value="za">Z -> A</mat-radio-button>
+    </mat-radio-group>
+
+    <app-users-list [users]="users"
+                    [selectedRole]="selectedRole"
+                    [selectedSort]="selectedSort"
+    ></app-users-list>
+  </div>
+
+  <div class="col">
+    <router-outlet></router-outlet>
   </div>
 </div>

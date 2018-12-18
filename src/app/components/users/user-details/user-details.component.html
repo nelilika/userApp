@@ -9,7 +9,7 @@
        [src]="user.avatarUrl"
        [alt]="user.lastName">
   <mat-card-content>
-    <h4>Delailed information</h4>
+    <h4 class="header">Delailed information</h4>
     <p>Age: {{ user.age }}</p>
     <p>City: {{ user.city }}</p>
     <mat-accordion>
@@ -22,9 +22,8 @@
         </mat-expansion-panel-header>
         <mat-list role="list">
           <mat-list-item role="listitem"
-                         *ngFor="let skill of user.skills">
-            <mat-icon mat-list-icon>fiber_manual_record</mat-icon>
-            <h5>{{ skill }}</h5>
+                         *ngFor="let skill of user.skills; let i = index">
+            <p> {{ i + 1}}. {{ skill }}</p>
           </mat-list-item>
         </mat-list>
       </mat-expansion-panel>

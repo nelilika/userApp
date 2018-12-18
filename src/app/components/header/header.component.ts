@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,16 +10,17 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 export class HeaderComponent implements OnInit {
   links: Array<any> = [{
     label: 'Home',
-    link: '',
+    link: '/dashboard',
   }, {
     label: 'Users',
-    link: './users',
+    link: '/users',
   }];
-  activeLink = this.links[0].label;
+  activeLink: string;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    this.activeLink = this.router.url;
   }
 
 }
