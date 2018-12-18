@@ -1,3 +1,5 @@
+import { ISkills } from "./skills.model";
+
 export interface IUser {
   id: number;
   firstName: string;
@@ -6,6 +8,6 @@ export interface IUser {
   age: number;
   city: string;
   avatarUrl: string;
-  skills: Array<string>;
+  skills: Array<ISkills>;
   about: string;
 }

@@ -20,12 +20,13 @@
             Skills
           </mat-panel-title>
         </mat-expansion-panel-header>
-        <mat-list role="list">
-          <mat-list-item role="listitem"
-                         *ngFor="let skill of user.skills; let i = index">
-            <p> {{ i + 1}}. {{ skill }}</p>
-          </mat-list-item>
-        </mat-list>
+        <mat-chip-list>
+          <mat-chip *ngFor="let skill of user.skills; let i = index"
+                    [color]="setSkillLevelColor(skill.level)"
+                    [selected]="skill.level >= 3">
+            {{ skill.name }} ({{skill.level}})
+          </mat-chip>
+        </mat-chip-list>
       </mat-expansion-panel>
     </mat-accordion>
   </mat-card-content>

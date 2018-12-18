@@ -7,12 +7,19 @@
     "age": "23",
     "city": "Kharkiv",
     "avatarUrl": "https://bit.ly/2jOOA5M",
-    "skills": [
-      "JavaScript",
-      "Python",
-      "OOP",
-      "Node.Js"
-    ],
+    "skills": [{
+      "name": "JavaScript",
+      "level": "5"
+    }, {
+      "name": "Python",
+      "level": "1"
+    }, {
+      "name": "OOP",
+      "level": "2"
+    }, {
+      "name": "Node.Js",
+      "level": "3"
+    }],
     "about": "No comfort do written conduct at prevent manners on. Celebrated contrasted discretion him sympathize her collecting occasional. Do answered bachelor occasion in of offended no concerns."
   }, {
     "id": "2",
@@ -22,10 +29,13 @@
     "age": "25",
     "city": "Kiev",
     "avatarUrl": "https://bit.ly/2pXBWBU",
-    "skills": [
-      "Java",
-      "Eclipse"
-    ],
+    "skills": [{
+      "name": "Java",
+      "level": "3"
+    }, {
+        "name": "Eclipse",
+        "level": "5"
+      }],
     "about": "Supply worthy warmth branch of no ye. Voice tried known to as my to. Though wished merits or be. Alone visit use these smart rooms ham. No waiting in on enjoyed placing it inquiry."
   }, {
     "id": "3",
@@ -35,11 +45,16 @@
     "age": "30",
     "city": "Odessa",
     "avatarUrl": "https://bit.ly/2EeZj1F",
-    "skills": [
-      "C++",
-      "C",
-      "QA"
-    ],
+    "skills": [{
+      "name": "C++",
+      "level": "1"
+    }, {
+      "name": "C",
+      "level": "2"
+    }, {
+      "name": "QA",
+      "level": "4"
+    }],
     "about": "Provided so as doubtful on striking required. Waiting we to compass assured. "
   }, {
     "id": "4",
@@ -49,11 +64,16 @@
     "age": "27",
     "city": "Kharkiv",
     "avatarUrl": "https://bit.ly/2qCScIR",
-    "skills": [
-      "C++",
-      "JavaScript",
-      "QA"
-    ],
+    "skills": [{
+      "name": "C++",
+      "level": "5"
+    }, {
+      "name": "JavaScript",
+      "level": "5"
+    }, {
+      "name": "QA",
+      "level": "5"
+    }],
     "about": "Opinions learning likewise daughter now age outweigh. Fanny at wrong table ye in."
   }, {
     "id": "5",
@@ -63,11 +83,16 @@
     "age": "21",
     "city": "Kharkiv",
     "avatarUrl": "https://bit.ly/2ROVeFj",
-    "skills": [
-      "C++",
-      "C",
-      "GO"
-    ],
+    "skills": [{
+      "name": "C++",
+      "level": "1"
+    }, {
+      "name": "C",
+      "level": "3"
+    }, {
+      "name": "GO",
+      "level": "5"
+    }],
     "about": "Discourse otherwise disposing as it of strangers forfeited deficient. "
   }],
   "login": {

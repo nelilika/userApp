@@ -30,6 +30,10 @@ export class UserDetailsComponent implements OnInit, OnDestroy {
       });
   }
 
+  setSkillLevelColor(skillLevel: number): string {
+    return Number(skillLevel) === 5 ? 'accent' : 'primary';
+  }
+
   ngOnDestroy() {
     this.paramsSubscription.unsubscribe();
     this.userSubscription.unsubscribe();
